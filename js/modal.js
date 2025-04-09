@@ -25,6 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
                       </div>
                   </div>
               </div>
+              <section class="skill">
+            <h3 class="h3 skills-title">Utilisé: </h3>
+            <ul class="skills-list">
+              <li class="skills-item">
+                <img src="img/python.png" alt="Python" />
+                <h5 class="h5">Python</h5>
+              </li>
+          </section>
           </div>
       `,
       cimetiere: `
@@ -148,6 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
     elem.classList.toggle('active');
   };
 
+
+  
 });
-
-
