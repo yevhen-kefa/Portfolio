@@ -946,6 +946,7 @@ textarea.form-input::-webkit-resizer {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  min-width: 260px;
   padding: 13px 20px;
   border-radius: 14px;
   font-size: var(--fs-6);

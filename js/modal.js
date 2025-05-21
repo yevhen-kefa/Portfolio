@@ -4,6 +4,63 @@ document.addEventListener('DOMContentLoaded', () => {
   const popupContent = document.getElementById('popup-content');
 
   const descriptions = {
+    unesco: `
+        <div class="popup-content">
+          <header class="modal__header" onclick="togglePopup('unesco')">
+              <h2  class="h2 form-title">Grenade</h2>
+          </header>
+          <div class="modal__content">
+              <div class="modal__blocks">
+                  <div class="modal__block">
+                      <img src="img/projects/Page_d'accueil_unesco.png" alt="unesco">
+                      <p>Dans ce projet, nous avons développé, en équipe de 4 personnes, un site web pour présenter la ville de Grenade à l'UNESCO. </p>
+                  </div>
+                  <div class="modal__block">
+                      <p>L'objectif de ce projet était d'apprendre à planifier le processus de développement d'un projet de groupe pendant l'année académique, ainsi que d'apprendre et d'utiliser activement des langages de programmation tels que HTML, CSS, JS, PHP, SQL. Nous avons également appris à créer un design pour un site web et à l'implémenter par la suite.</p>
+                      <img src="img/projects/histoire_unesco.png" alt="unesco">
+                  </div>
+                  <div class="modal__block">
+                      <img src="img/projects/gastro_unesco.png" alt="unesco">
+                      <p>Dans ce projet, j'ai joué le rôle d'un des développeurs web front-end, et j'ai également participé partiellement à la création du design et du travail back-end. Par conséquent, nous avons maîtrisé dans une certaine mesure des langages de programmation tels que HTML, CSS, JS, PHP, SQL et nous avons appris à les utiliser en pratique en créant un site web.
+
+                      </br>Pour aller sur le site, cliquez <a href="">ici</a>.</p>
+                  </div>
+              </div>
+          </div>
+          <section class="skill">
+                  <h3 class="h3 skills-title">Utilisé: </h3>
+                  <ul class="skills-list">
+                      <li class="skills-item">
+                <img src="img/html.png" alt="Html" />
+                <h5 class="h5">Html5</h5>
+              </li>
+              <li class="skills-item">
+                <img src="img/css.png" alt="CSS" />
+                <h5 class="h5">CSS3</h5>
+              </li>
+              <li class="skills-item">
+                <img src="img/javascript.png" alt="JavaScript" />
+                <h5 class="h5">JavaScript</h5>
+              </li>
+              <li class="skills-item">
+                <img src="img/php.png" alt="php" />
+                <h5 class="h5">Php</h5>
+              </li>
+              <li class="skills-item">
+                <img src="img/sql.png" alt="sql" />
+                <h5 class="h5">Sql</h5>
+              </li>
+              <li class="skills-item">
+                <img src="img/MySQL.png" alt="sql" />
+                <h5 class="h5">MySQL</h5>
+              </li>
+               <li class="skills-item">
+                <img src="img/figma.png" alt="Figma" />
+                <h5 class="h5">Figma</h5>
+              </li>
+          </section>
+        </div>
+      `,
       qix: `
           <div class="popup-content">
               <header class="modal__header" onclick="togglePopup('qix')">
@@ -26,13 +83,13 @@ document.addEventListener('DOMContentLoaded', () => {
                   </div>
               </div>
               <section class="skill">
-            <h3 class="h3 skills-title">Utilisé: </h3>
-            <ul class="skills-list">
-              <li class="skills-item">
-                <img src="img/python.png" alt="Python" />
-                <h5 class="h5">Python</h5>
-              </li>
-          </section>
+                  <h3 class="h3 skills-title">Utilisé: </h3>
+                  <ul class="skills-list">
+                      <li class="skills-item">
+                          <img src="img/python.png" alt="Python" />
+                          <h5 class="h5">Python</h5>
+                      </li>
+              </section>
           </div>
       `,
       cimetiere: `
@@ -58,59 +115,26 @@ document.addEventListener('DOMContentLoaded', () => {
                  
               </div>
           </div>
-        </div>
-      `,
-      craftyhub: `
-      <div class="popup-content">
-      <header class="modal__header" onclick="togglePopup('craftyhub')">
-          <h2  class="h2 form-title">CraftyHub</h2>
-      </header>
-      <div class="modal__content">
-          <div class="modal__blocks">
-              <div class="modal__block">
-                  <img src="img/projects/crafty_log.png" alt="craftyhub">
-                  <p>Dans ce travail, nous avons travaillé en trinôme sur Figma, où nous avons appris à créer non seulement un design pour des images statiques, mais aussi à développer un prototype d'applications/sites web en utilisant les capacités de ce programme.</p>
-              </div>
-              <div class="modal__block">
-                  <p>L'objectif de cette tâche était de créer un prototype d'application mobile similaire à un magasin d'articles ménagers et professionnels, de matériaux ou d'outils. Il était nécessaire de créer une maquette reflétant les fonctionnalités et les capacités potentielles de la future application.</p>
-                  <img src="img/projects/crafty_accueil.png" alt="craftyhub">
-                </div>
-              <div class="modal__block">
-                  <img src="img/projects/crafty_tuto.png" alt="craftyhub">
-                  <p>Mes collègues et moi-même avons travaillé ensemble sur la conception des différentes pages et sur la fonctionnalité, et comme nous travaillions dans le même programme sur le même projet, où aucune connaissance en programmation n'était requise, nous nous sommes occupés chacun de la conception et de la fonctionnalité. En fin de compte, cela nous a permis d'acquérir une bonne expérience des projets d'équipe
-                  </br>Pour aller sur le site, cliquez <a href="https://www.figma.com/design/7il8hrETftqWNl2nRuxIqT/craftyhub?node-id=4-1610&t=NDnqEIGkeaZBHF8A-0">ici</a>.</p>
-              </div>
-              <div class="modal__block">
-                  <img src="img/projects/crafty_tuto2.png" alt="craftyhub">
-                  <img src="img/projects/crafty_profile.png" alt="craftyhub">
-              </div>
-          </div>
-      </div>
-  </div>
-      `,
-      unesco: `
-        <div class="popup-content">
-          <header class="modal__header" onclick="togglePopup('unesco')">
-              <h2  class="h2 form-title">Grenade</h2>
-          </header>
-          <div class="modal__content">
-              <div class="modal__blocks">
-                  <div class="modal__block">
-                      <img src="img/projects/Page_d'accueil_unesco.png" alt="unesco">
-                      <p>Dans ce projet, nous avons développé, en équipe de 4 personnes, un site web pour présenter la ville de Grenade à l'UNESCO. </p>
-                  </div>
-                  <div class="modal__block">
-                      <p>L'objectif de ce projet était d'apprendre à planifier le processus de développement d'un projet de groupe pendant l'année académique, ainsi que d'apprendre et d'utiliser activement des langages de programmation tels que HTML, CSS, JS, PHP, SQL. Nous avons également appris à créer un design pour un site web et à l'implémenter par la suite.</p>
-                      <img src="img/projects/histoire_unesco.png" alt="unesco">
-                  </div>
-                  <div class="modal__block">
-                      <img src="img/projects/gastro_unesco.png" alt="unesco">
-                      <p>Dans ce projet, j'ai joué le rôle d'un des développeurs web front-end, et j'ai également participé partiellement à la création du design et du travail back-end. Par conséquent, nous avons maîtrisé dans une certaine mesure des langages de programmation tels que HTML, CSS, JS, PHP, SQL et nous avons appris à les utiliser en pratique en créant un site web.
-
-                      </br>Pour aller sur le site, cliquez <a href="">ici</a>.</p>
-                  </div>
-              </div>
-          </div>
+          <section class="skill">
+                  <h3 class="h3 skills-title">Utilisé: </h3>
+                  <ul class="skills-list">
+                       <li class="skills-item">
+                <img src="img/php.png" alt="php" />
+                <h5 class="h5">Php</h5>
+              </li>
+              <li class="skills-item">
+                <img src="img/sql.png" alt="sql" />
+                <h5 class="h5">Sql</h5>
+              </li>
+              <li class="skills-item">
+                <img src="img/MySQL.png" alt="sql" />
+                <h5 class="h5">MySQL</h5>
+              </li>
+              <li class="skills-item">
+                <img src="img/PostgreSQL.png" alt="sql" />
+                <h5 class="h5">PostgrSQL</h5>
+              </li>
+              </section>
         </div>
       `,
       codex: `
@@ -134,6 +158,14 @@ document.addEventListener('DOMContentLoaded', () => {
                   </div>
               </div>
           </div>
+          <section class="skill">
+          <h3 class="h3 skills-title">Utilisé: </h3>
+          <ul class="skills-list">
+              <li class="skills-item">
+                <img src="img/java.png" alt="Java" />
+                <h5 class="h5">Java</h5>
+              </li>
+      </section>
         </div>
       `
 

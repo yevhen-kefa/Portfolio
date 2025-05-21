@@ -24,9 +24,9 @@
           </figure>
 
           <div class="info-content">
-            <h1 class="name" title="Thomas Shelby">Kefa Yevhen</h1>
+            <h1 class="name" title="Thomas Shelby">KEFA Yevhen</h1>
 
-            <p class="title">Software developer</p>
+            <p class="title">Développeur de l'application</p>
             <ul class="social-list">
               <li class="social-item">
                 <a href="https://www.linkedin.com/in/yevhen-kefa-3203a22a1/" class="social-link"><i class="fa-brands fa-linkedin" title="LinkedIn"></i></a>
@@ -83,6 +83,15 @@
                 <address>Saint-Maur-des-Fossés,  Île-de-France, France</address>
               </div>
             </li>
+            <br>
+            <li class="contact-item">
+              <div class="contact-info">
+                <a href="img/CV_YevhenKefa .pdf" download class="btn">
+                  <i class="fa-solid fa-download"></i> <span>Télécharger le CV</span>
+                </a>
+                
+              </div>
+            </li>
           </ul>
         </div>
       </aside>
@@ -92,13 +101,13 @@
         <nav class="navbar">
           <ul class="navbar-list">
             <li class="navbar-item">
-              <button class="navbar-link active" data-nav-link>About</button>
+              <button class="navbar-link active" data-nav-link>A propos de</button>
             </li>
             <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Resume</button>
+              <button class="navbar-link" data-nav-link>Résumé</button>
             </li>
             <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Project</button>
+              <button class="navbar-link" data-nav-link>Projet</button>
             </li>
             <li class="navbar-item">
               <button class="navbar-link" data-nav-link>Contact</button>
@@ -108,7 +117,7 @@
         <!--============================== NAVBAR END ==============================-->
 
         <!--============================== ABOUT START ==============================-->
-        <article class="about active" data-page="about">
+        <article class="a proros de active" data-page="a propos de">
           <header>
             <h2 class="h2 article-title">A propos de moi</h2>
           </header>
@@ -119,23 +128,23 @@
             </p>
 
             <p>
-              Je m'intéresse à la programmation depuis l'école, c'est pourquoi j'ai choisi cette spécialité. 
+              Je m'intéresse à la programmation depuis colege, c'est pourquoi j'ai choisi cette spécialité. 
               J'ai d'abord étudié en Ukraine, mais je suis actuellement en France. Je m'intéresse au développement de logiciels et à
               l'administration de réseaux, que j'étudie actuellement. Parallèlement à mes études de développeur à l'Université Gustave Eiffel, 
               j'étudie également à l'IT STEP Computer Academy dans le domaine des réseaux et de la cybersécurité. 
               En dehors de la programmation, j'aime faire de la gym et je joue de la guitare et du piano. Et j'ai eu un temps l'occasion de travailler en tant que professeur de piano
             </p>
-            <a href="img/CV_YevhenKefa .pdf" download class="btn">
+            <!-- <a href="img/CV_YevhenKefa .pdf" download class="btn">
               <i class="fa-solid fa-download"></i> <span>Télécharger le CV</span>
-            </a>
+            </a> -->
           </section>
         </article>
         <!--============================== ABOUT END ==============================-->
 
         <!--============================== RESUME START ==============================-->
-        <article class="resume" data-page="resume">
+        <article class="résumé" data-page="résumé">
           <header>
-            <h2 class="h2 article-title">Resume</h2>
+            <h2 class="h2 article-title">Résumé</h2>
           </header>
 
           <section class="timeline">
@@ -297,13 +306,67 @@
         <!--============================== RESUME END ==============================-->
 
         <!--============================== PORTFOLIO START ==============================-->
-        <article class="project" data-page="project">
+        <article class="projet" data-page="projet">
           <header>
-              <h2 class="h2 article-title">Projects</h2>
+              <h2 class="h2 article-title">Projets</h2>
           </header>
+          
           <section class="projects">
+              <ul class="filter-list">
+                  <!-- TAB ITEM -->
+                  <!-- TAB ITEMS --><li class="filter-item">
+                    <button class="active" data-filter-btn="">All</button>
+                  </li>
+                
+                  <!-- TAB ITEM -->
+                  <li class="filter-item">
+                    <button data-filter-btn="">Web design</button>
+                  </li>
+                
+                  <!-- TAB ITEM -->
+                  <li class="filter-item">
+                    <button data-filter-btn="">Applications</button>
+                  </li>
+                
+                  <!-- TAB ITEM -->
+                  <li class="filter-item">
+                    <button data-filter-btn="">Développement web</button>
+                  </li>
+              </ul>
+              <div class="filter-select-box">
+              <!-- SMALL SCREEN FOR TAB ITEMS -->
+              <button class="filter-select" data-select="">
+                <span class="select-value" data-selecct-value="">Select category</span>
+
+                <span class="select-icon">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </button>
+
+              <ul class="select-list">
+                <!-- TAB ITEM -->
+                <li class="select-item">
+                  <button data-select-item="">All</button>
+                </li>
+
+                <!-- TAB ITEM -->
+                <li class="select-item">
+                  <button data-select-item="">Web design</button>
+                </li>
+
+                <!-- TAB ITEM -->
+                <li class="select-item">
+                  <button data-select-item="">Applications</button>
+                </li>
+
+                <!-- TAB ITEM -->
+                <li class="select-item">
+                  <button data-select-item="">Développement web</button>
+                </li>
+              </ul>
+              </div>
               <ul class="project-list">
-                <li class="project-item active" data-project="unesco">
+                <li class="project-item active" data-project="unesco" data-filter-item="" data-category="développement web">
                   <i>
                       <figure class="project-img">
                           <div class="project-item-icon-box">
@@ -315,7 +378,7 @@
                       <p class="project-category">Développement d'un site web UNESCO</p>
                   </i>
               </li>
-                  <li class="project-item active" data-project="qix">
+                  <li class="project-item active" data-project="qix" data-filter-item="" data-category="applications"> 
                       <i>
                           <figure class="project-img">
                               <div class="project-item-icon-box">
@@ -327,7 +390,7 @@
                           <p class="project-category">Développement de jeux</p>
                       </i>
                   </li>
-                  <li class="project-item active" data-project="cimetiere">
+                  <li class="project-item active" data-project="cimetiere" data-filter-item="" data-category="développement web">
                       <i>
                           <figure class="project-img">
                               <div class="project-item-icon-box">
@@ -338,27 +401,14 @@
                           <h3 class="project-title">Cimetière</h3>
                           <p class="project-category">Développement d'un site web avec une base de données</p>
                       </i>
-                  </li> 
-                  <li class="project-item active" data-project="craftyhub">
-                      <i>
-                          <figure class="project-img">
-                              <div class="project-item-icon-box">
-                                  <i class="fa-solid fa-arrow-up-long"></i>
-                              </div>
-                              <img src="img/craftyhub.png" alt="craftyhub" loading="lazy" />
-                          </figure>
-                          <h3 class="project-title">Craftyhub</h3>
-                          <p class="project-category">Développer un prototype d'application mobile avec Figma</p>
-                      </i>
-                  </li>
-                  
-                <li class="project-item active" data-project="codex">
+                  </li>               
+                <li class="project-item active" data-project="codex" data-filter-item="" data-category="applications">
                   <i>
                       <figure class="project-img">
                           <div class="project-item-icon-box">
                               <i class="fa-solid fa-arrow-up-long"></i>
                           </div>
-                          <img src="img/naturalis.png" alt="codex" loading="lazy" />
+                          <img src="img/naturalis.png " alt="codex" loading="lazy" />
                       </figure>
                       <h3 class="project-title">Codex Naturalis</h3>
                       <p class="project-category">Développer un prototype d'application mobile avec Figma</p>
