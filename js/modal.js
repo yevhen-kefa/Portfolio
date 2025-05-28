@@ -28,22 +28,22 @@ closeViewer.addEventListener('click', () => {
                   <h2  class="h2 form-title">Kyoto</h2>
               </header>
               <div class="modal__content">
-                  <div class="modal__blocks">
-                      <div class="modal__block">
-                          <img src="img/kyoto.png" alt="kyoto">
-                          <p>Dans ce projet, nous avons développé un jeu en Python Qix en équipes de deux. Le but de ce projet était d'apprendre à travailler avec des objets en Python en utilisant la bibliothèque fltk (une bibliothèque conçue pour simplifier le travail avec les fenêtres et les objets), et à la fin nous devions présenter le code de travail du jeu à un comité d'enseignants. </p>
-                      </div>
-                      <div class="modal__block">
-                          <img src="img/projects/kyoto_1.png" alt="kyoto">
-                          <p>Qix est un jeu d'arcade dans lequel les joueurs capturent des parties du plateau de jeu pour créer des zones fermées. Les joueurs contrôlent un « marqueur » qui se déplace sur les bords du terrain et peut y pénétrer en laissant une trace. La tâche du joueur est de capturer un certain pourcentage du terrain tout en évitant le contact avec les ennemis et les obstacles. </p>
-                      </div>
-                      <div class="modal__block">
-                          <p>En conséquence, après plusieurs mois de travail, notre équipe a développé un jeu avec une logique fonctionnelle, des animations fluides et des contrôles réactifs. Au cours du processus de développement, j'étais responsable du mouvement du personnage, de la possibilité de peindre la zone de jeu, du mouvement des ennemis et de l'interaction avec eux. Le deuxième membre de notre équipe a travaillé sur les graphiques, les animations et a contribué à développer l'interaction avec les ennemis.</p>
-                          <img src="img/projects/kyoto_2.png" alt="kyoto">
-                      </div>
-                  </div>
+                 <div class="modal__blocks">
+                    <div class="modal__block">
+                        <img src="img/kyoto.png" alt="kyoto">
+                        <p>Ce projet consistait à créer un site web présentant la ville de Grenade comme candidate au patrimoine de l’UNESCO. Le site propose des informations sur l’histoire, la culture et les loisirs de la ville.</p>
+                    </div>
+                    <div class="modal__block">
+                        <img src="img/projects/kyoto_1.png" alt="kyoto">
+                        <p>Réalisé sur deux semestres en équipe de cinq (dont trois actifs), le site a été développé entièrement sans modèles, en utilisant HTML, CSS, JavaScript, PHP et SQL. Le contenu est chargé dynamiquement depuis une base de données.</p>
+                    </div>
+                    <div class="modal__block">
+                        <p>J’ai participé à la partie front-end, au design de l’interface et à l’intégration du contenu dynamique. Le projet a été un défi surtout organisationnel. Le résultat est un site clair, fonctionnel et responsive. Le code est disponible sur GitHub.</p>
+                        <img src="img/projects/kyoto_2.png" alt="kyoto">
+                    </div>
+                </div>
               </div>
-              <h3 class="h3 skills-title"><a class="liens" href="https://github.com/yevhen-kefa/Qix#">Voir sur GitHub</a> </h3>
+              <h3 class="h3 skills-title"><a class="liens" href="https://github.com/oXoGus/Projet-UNESCO">Voir sur GitHub</a> </h3>
               <section class="skill">
                   <h3 class="h3 skills-title">Utilisé: </h3>
                   <ul class="skills-list">
@@ -88,14 +88,14 @@ closeViewer.addEventListener('click', () => {
                   <div class="modal__blocks">
                       <div class="modal__block">
                           <img src="img/silveterna.png" alt="v">
-                          <p>Dans ce projet, nous avons développé un jeu en Python Qix en équipes de deux. Le but de ce projet était d'apprendre à travailler avec des objets en Python en utilisant la bibliothèque fltk (une bibliothèque conçue pour simplifier le travail avec les fenêtres et les objets), et à la fin nous devions présenter le code de travail du jeu à un comité d'enseignants. </p>
+                          <p>Projet éducatif réalisé en équipe de quatre, avec un délai de 1,5 mois. En tant que chef de projet, j’ai coordonné la création d’un site destiné aux personnes âgées, leur permettant de discuter via un chat interne et d’organiser des événements.</p>
                       </div>
                       <div class="modal__block">
                           <img src="img/projects/silveterna_1.png" alt="silveterna">
-                          <p>Qix est un jeu d'arcade dans lequel les joueurs capturent des parties du plateau de jeu pour créer des zones fermées. Les joueurs contrôlent un « marqueur » qui se déplace sur les bords du terrain et peut y pénétrer en laissant une trace. La tâche du joueur est de capturer un certain pourcentage du terrain tout en évitant le contact avec les ennemis et les obstacles. </p>
+                          <p>Le site comprend un système de messagerie en temps réel, un calendrier interactif, et une interface simple, pensée pour l’accessibilité. L’ensemble a été conçu sans modèle préexistant, à partir de zéro.</p>
                       </div>
                       <div class="modal__block">
-                          <p>En conséquence, après plusieurs mois de travail, notre équipe a développé un jeu avec une logique fonctionnelle, des animations fluides et des contrôles réactifs. Au cours du processus de développement, j'étais responsable du mouvement du personnage, de la possibilité de peindre la zone de jeu, du mouvement des ennemis et de l'interaction avec eux. Le deuxième membre de notre équipe a travaillé sur les graphiques, les animations et a contribué à développer l'interaction avec les ennemis.</p>
+                          <p>Nous avons utilisé PostgreSQL pour créer une base de données complète. J’ai supervisé le développement du chat, du calendrier, ainsi que l’organisation des tâches techniques. Le projet a représenté un bon équilibre entre complexité fonctionnelle et gestion d’équipe.</p>
                           <img src="img/projects/silveterna_2.png" alt="silveterna">
                       </div>
                       <div class="modal__block">
@@ -104,7 +104,7 @@ closeViewer.addEventListener('click', () => {
                       </div>
                   </div>
               </div>
-              <h3 class="h3 skills-title"><a class="liens" href="https://github.com/yevhen-kefa/Qix#">Voir sur GitHub</a> </h3>
+              <h3 class="h3 skills-title"><a class="liens" href="https://github.com/yevhen-kefa/SilvEterna">Voir sur GitHub</a> </h3>
               <section class="skill">
                   <h3 class="h3 skills-title">Utilisé: </h3>
                   <ul class="skills-list">
@@ -206,23 +206,24 @@ closeViewer.addEventListener('click', () => {
               <header class="modal__header" onclick="togglePopup('tetris')">
                   <h2  class="h2 form-title">Tetris</h2>
               </header>
-              <div class="modal__content">
-                  <div class="modal__blocks">
-                      <div class="modal__block">
-                          <img src="img/tetris.png" alt="tetris">
-                          <p>Dans ce projet, nous avons développé un jeu en Python Qix en équipes de deux. Le but de ce projet était d'apprendre à travailler avec des objets en Python en utilisant la bibliothèque fltk (une bibliothèque conçue pour simplifier le travail avec les fenêtres et les objets), et à la fin nous devions présenter le code de travail du jeu à un comité d'enseignants. </p>
-                      </div>
-                      <div class="modal__block">
-                          <img src="img/projects/tetris_1.png" alt="tetris">
-                          <p>Qix est un jeu d'arcade dans lequel les joueurs capturent des parties du plateau de jeu pour créer des zones fermées. Les joueurs contrôlent un « marqueur » qui se déplace sur les bords du terrain et peut y pénétrer en laissant une trace. La tâche du joueur est de capturer un certain pourcentage du terrain tout en évitant le contact avec les ennemis et les obstacles. </p>
-                      </div>
-                      <div class="modal__block">
-                          <p>En conséquence, après plusieurs mois de travail, notre équipe a développé un jeu avec une logique fonctionnelle, des animations fluides et des contrôles réactifs. Au cours du processus de développement, j'étais responsable du mouvement du personnage, de la possibilité de peindre la zone de jeu, du mouvement des ennemis et de l'interaction avec eux. Le deuxième membre de notre équipe a travaillé sur les graphiques, les animations et a contribué à développer l'interaction avec les ennemis.</p>
-                          <img src="img/projects/tetris_2.png" alt="tetris">
-                      </div>
-                  </div>
-              </div>
-              <h3 class="h3 skills-title"><a class="liens" href="https://github.com/yevhen-kefa/Qix#">Voir sur GitHub</a> </h3>
+             <div class="modal__content">
+               <div class="modal__blocks">
+                 <div class="modal__block">
+                   <img src="img/tetris.png" alt="tetris">
+                   <p>Projet éducatif de 2 mois en binôme, avec pour objectif d’approfondir le travail en Python. En tant que chef de projet, j’ai coordonné la réalisation d’un jeu Tetris fonctionnel avec plusieurs niveaux et un système de points.</p>
+                 </div>
+                 <div class="modal__block">
+                   <img src="img/projects/tetris_1.png" alt="tetris">
+                   <p>Le jeu inclut une logique complète : progression par niveaux, score, sauvegarde de parties, bonus et interactions dynamiques. Nous avons utilisé uniquement la bibliothèque fltk.py, sans aucun modèle externe.</p>
+                 </div>
+                 <div class="modal__block">
+                   <p>J’ai principalement travaillé sur la logique du jeu, les mécaniques de mouvement des pièces, la détection des lignes et la gestion des scores. Le projet a représenté un défi technique intéressant et formateur.</p>
+                   <img src="img/projects/tetris_2.png" alt="tetris">
+                 </div>
+               </div>
+             </div>
+
+              <h3 class="h3 skills-title"><a class="liens" href="https://github.com/yevhen-kefa/tetris">Voir sur GitHub</a> </h3>
               <section class="skill">
                   <h3 class="h3 skills-title">Utilisé: </h3>
                   <ul class="skills-list">
@@ -272,25 +273,26 @@ closeViewer.addEventListener('click', () => {
               </header>
               <div class="modal__content">
                   <div class="modal__blocks">
-                      <div class="modal__block">
-                          <img src="img/primeurpassions.png" alt="primeur_passions">
-                          <p>Dans ce projet, nous avons développé un jeu en Python Qix en équipes de deux. Le but de ce projet était d'apprendre à travailler avec des objets en Python en utilisant la bibliothèque fltk (une bibliothèque conçue pour simplifier le travail avec les fenêtres et les objets), et à la fin nous devions présenter le code de travail du jeu à un comité d'enseignants. </p>
-                      </div>
-                      <div class="modal__block">
-                          <img src="img/projects/primeurpassions_1.png" alt="primeur_passions">
-                          <p>Qix est un jeu d'arcade dans lequel les joueurs capturent des parties du plateau de jeu pour créer des zones fermées. Les joueurs contrôlent un « marqueur » qui se déplace sur les bords du terrain et peut y pénétrer en laissant une trace. La tâche du joueur est de capturer un certain pourcentage du terrain tout en évitant le contact avec les ennemis et les obstacles. </p>
-                      </div>
-                      <div class="modal__block">
-                          <p>En conséquence, après plusieurs mois de travail, notre équipe a développé un jeu avec une logique fonctionnelle, des animations fluides et des contrôles réactifs. Au cours du processus de développement, j'étais responsable du mouvement du personnage, de la possibilité de peindre la zone de jeu, du mouvement des ennemis et de l'interaction avec eux. Le deuxième membre de notre équipe a travaillé sur les graphiques, les animations et a contribué à développer l'interaction avec les ennemis.</p>
-                          <img src="img/projects/primeurpassions_2.png" alt="primeur_passions">
-                      </div>
-                      <div class="modal__block">
-                          <img src="img/projects/primeurpassions_3.png" alt="primeur_passions">
-                          <img src="img/projects/primeurpassions_4.png" alt="primeur_passions">
-                      </div>
+                    <div class="modal__block">
+                      <img src="img/primeurpassions.png" alt="primeur_passions">
+                      <p>Projet éducatif en binôme sur 1,5 semestre, avec pour objectif de créer un site e-commerce. J’ai agi en tant que chef de projet, en supervisant la conception progressive de la base de données et des pages du site.</p>
+                    </div>
+                    <div class="modal__block">
+                      <img src="img/projects/primeurpassions_1.png" alt="primeur_passions">
+                      <p>Le site propose des fonctionnalités typiques d’un magasin en ligne : affichage des produits, gestion du panier, validation de commande, etc. Tout a été développé sans utiliser de modèle, depuis zéro.</p>
+                    </div>
+                    <div class="modal__block">
+                      <p>J’ai participé à l’architecture de la base de données, à l’intégration des pages ainsi qu’à la mise en place des processus de commande. Le projet demandait à la fois une rigueur technique et une bonne coordination en équipe.</p>
+                      <img src="img/projects/primeurpassions_2.png" alt="primeur_passions">
+                    </div>
+                    <div class="modal__block">
+                      <img src="img/projects/primeurpassions_3.png" alt="primeur_passions">
+                      <img src="img/projects/primeurpassions_4.png" alt="primeur_passions">
+                    </div>
                   </div>
+
               </div>
-              <h3 class="h3 skills-title"><a class="liens" href="https://github.com/yevhen-kefa/Qix#">Voir sur GitHub</a> </h3>
+              <h3 class="h3 skills-title"><a class="liens" href="https://github.com/yevhen-kefa/Primeur-Passions">Voir sur GitHub</a> </h3>
               <section class="skill">
                   <h3 class="h3 skills-title">Utilisé: </h3>
                   <ul class="skills-list">
