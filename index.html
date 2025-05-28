@@ -86,7 +86,7 @@
             <br>
             <li class="contact-item">
               <div class="contact-info">
-                <a href="img/CV_YevhenKefa .pdf" download class="btn">
+                <a href="img/CV_YevhenKefa.pdf" download class="btn">
                   <i class="fa-solid fa-download"></i> <span>Télécharger le CV</span>
                 </a>
                 
@@ -318,10 +318,10 @@
                     <button class="active" data-filter-btn="">All</button>
                   </li>
                 
-                  <!-- TAB ITEM -->
+                  <!-- TAB ITEM
                   <li class="filter-item">
                     <button data-filter-btn="">Web design</button>
-                  </li>
+                  </li> -->
                 
                   <!-- TAB ITEM -->
                   <li class="filter-item">
@@ -349,10 +349,10 @@
                   <button data-select-item="">All</button>
                 </li>
 
-                <!-- TAB ITEM -->
+                <!-- TAB ITEM
                 <li class="select-item">
                   <button data-select-item="">Web design</button>
-                </li>
+                </li> -->
 
                 <!-- TAB ITEM -->
                 <li class="select-item">
@@ -366,6 +366,66 @@
               </ul>
               </div>
               <ul class="project-list">
+                <li class="project-item active" data-project="kyoto" data-filter-item="" data-category="développement web">
+                  <i>
+                      <figure class="project-img">
+                          <div class="project-item-icon-box">
+                              <i class="fa-solid fa-arrow-up-long"></i>
+                          </div>
+                          <img src="img/kyoto.png" alt="kyoto" loading="lazy" />
+                      </figure>
+                      <h3 class="project-title">Kyoto</h3>
+                      <p class="project-category">Développement d'un site web UNESCO</p>
+                  </i>
+              </li>
+              <li class="project-item active" data-project="tetris" data-filter-item="" data-category="applications">
+                  <i>
+                      <figure class="project-img">
+                          <div class="project-item-icon-box">
+                              <i class="fa-solid fa-arrow-up-long"></i>
+                          </div>
+                          <img src="img/tetris.png" alt="tetris" loading="lazy" />
+                      </figure>
+                      <h3 class="project-title">Tetris</h3>
+                      <p class="project-category">Développement de jeux</p>
+                  </i>
+              </li>
+              <li class="project-item active" data-project="primeur_passions" data-filter-item="" data-category="développement web">
+                  <i>
+                      <figure class="project-img">
+                          <div class="project-item-icon-box">
+                              <i class="fa-solid fa-arrow-up-long"></i>
+                          </div>
+                          <img src="img/primeurpassions.png" alt="primeur_passions" loading="lazy" />
+                      </figure>
+                      <h3 class="project-title">Primeur Passions</h3>
+                      <p class="project-category">Développement d'un site web avec une base de données</p>
+                  </i>
+              </li>
+              <li class="project-item active" data-project="silveterna" data-filter-item="" data-category="développement web">
+                  <i>
+                      <figure class="project-img">
+                          <div class="project-item-icon-box">
+                              <i class="fa-solid fa-arrow-up-long"></i>
+                          </div>
+                          <img src="img/silveterna.png" alt="silveterna" loading="lazy" />
+                      </figure>
+                      <h3 class="project-title">SilvEterna</h3>
+                      <p class="project-category">Développement d'un site web avec une base de données</p>
+                  </i>
+              </li>
+              <li class="project-item active" data-project="yams" data-filter-item="" data-category="applications">
+                  <i>
+                      <figure class="project-img">
+                          <div class="project-item-icon-box">
+                              <i class="fa-solid fa-arrow-up-long"></i>
+                          </div>
+                          <img src="img/yams.png" alt="yams" loading="lazy" />
+                      </figure>
+                      <h3 class="project-title">Yams</h3>
+                      <p class="project-category">Développement d'un jeux</p>
+                  </i>
+              </li>
                 <li class="project-item active" data-project="unesco" data-filter-item="" data-category="développement web">
                   <i>
                       <figure class="project-img">
@@ -426,6 +486,10 @@
       
         
         <!--============================== PORTFOLIO START ==============================-->
+        <div id="image-viewer" style="display: none;">
+          <span id="close-viewer">&times;</span>
+          <img id="full-image" src="" alt="full view">
+        </div>
 
         <!--============================== CONTACT START ==============================-->
         <article class="contact" data-page="contact">
