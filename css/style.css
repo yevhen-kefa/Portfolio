@@ -1065,6 +1065,7 @@ border-radius: 0 0 20px 20px;
   text-align: center;
   color: var(--white-2);
 }
+
 .modal__block a{
   text-decoration: underline;
   color: var(--white-2);
@@ -1073,6 +1074,30 @@ border-radius: 0 0 20px 20px;
 }
 .modal__block a:hover{
   color: var(--light-blue);
+}
+.block-text-wrapper {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--white-2);
+}
+
+.block-text-wrapper p,
+.block-text-wrapper ul {
+  width: 100%;
+  margin: 0;
+  padding: 0; 
+}
+
+.block-text-wrapper ul {
+  list-style-position: inside; 
+  text-align: left; 
+  padding-left: 20px; 
+}
+
+.block-text-wrapper li {
+  margin-bottom: 5px; 
 }
 
 
