@@ -524,6 +524,54 @@ main {
 .about-text a {
   margin-top: 30px;
 }
+
+
+.lang-switch-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 45px;
+  height: 45px; /* Додав висоту для центрування */
+  
+  background: var(--nav-bar); 
+  border: 1px solid var(--jet);
+  border-radius: 0 20px 0 20px; 
+  
+  backdrop-filter: blur(10px);
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.1); /* Тінь вліво-вниз */
+  
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  /* Центрування тексту */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Стиль тексту всередині (EN / FR) */
+.lang-text {
+  color: var(--white-1);
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Ховер ефект */
+.lang-switch-wrapper:hover {
+  background: var(--bg-gradient-yellow-1);
+  border-color: transparent;
+}
+
+.lang-switch-wrapper:hover .lang-text {
+  color: #fff;
+}
+
+/* Адаптація тіні для світлої теми (опціонально, якщо треба змінити колір тіні) */
+body.light-theme .lang-switch-wrapper {
+  box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.15);
+}
 /*-----------------------------------*\
   ABOUT
 \*-----------------------------------*/

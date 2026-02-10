@@ -92,7 +92,7 @@
             <br>
             <li class="contact-item">
               <div class="contact-info">
-                <a href="img/CV_YevhenKefa  .pdf" download class="btn">
+                <a href="img/CV_YevhenKefa.pdf" download class="btn">
                   <i class="fa-solid fa-download"></i> <span>Télécharger le CV</span>
                 </a>
                 
@@ -103,26 +103,32 @@
       </aside>
 
       <div class="main-content">
+      
         <!--============================== NAVBAR START ==============================-->
         <nav class="navbar">
           <ul class="navbar-list">
             <li class="navbar-item">
-              <button class="navbar-link active" data-nav-link>A propos de</button>
+              <button class="navbar-link active" data-nav-link="a propos de">A propos de</button>
             </li>
             <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Résumé</button>
+              <button class="navbar-link" data-nav-link="résumé">Résumé</button>
             </li>
             <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Projet</button>
+              <button class="navbar-link" data-nav-link="projet">Projet</button>
             </li>
             <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Contact</button>
+              <button class="navbar-link" data-nav-link="contact">Contact</button>
             </li>
           </ul>
         </nav>
         <!--============================== NAVBAR END ==============================-->
 
         <!--============================== ABOUT START ==============================-->
+        <div class="lang-switch-wrapper" id="lang-toggle">
+          <span class="lang-text">EN</span>
+        </div>
+
+        <div id="google_translate_element" style="display:none;"></div>
         <article class="a proros de active" data-page="a propos de">
           <header>
             <h2 class="h2 article-title">A propos de moi</h2>
@@ -563,5 +569,62 @@
         <!--============================== CONTACT END ==============================-->
       </div>
     </main>
+    <script type="text/javascript">
+      // 1. Ініціалізація Google Translate (приховано)
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'fr', // Ваша основна мова
+          includedLanguages: 'en,fr', // Тільки ці дві мови
+          autoDisplay: false
+        }, 'google_translate_element');
+        
+        // Перевірка початкового стану кнопки
+        updateButtonLabel();
+      }
+
+      // 2. Логіка перемикання
+      const langToggle = document.getElementById('lang-toggle');
+      const langText = document.querySelector('.lang-text');
+
+      langToggle.addEventListener('click', function() {
+        // Отримуємо поточну мову з cookie
+        const currentLang = getCookie('googtrans');
+        
+        // Якщо зараз англійська -> перемикаємо на французьку (очищаємо cookie)
+        // Якщо зараз французька (або нічого) -> перемикаємо на англійську
+        if (currentLang && currentLang.includes('/en')) {
+          setCookie('googtrans', '/fr/fr'); // Повертаємо FR
+          // Перезавантаження для застосування змін
+          location.reload();
+        } else {
+          setCookie('googtrans', '/fr/en'); // Вмикаємо EN
+          location.reload();
+        }
+      });
+
+      // Функція для оновлення тексту на кнопці
+      function updateButtonLabel() {
+        const currentLang = getCookie('googtrans');
+        if (currentLang && currentLang.includes('/en')) {
+          langText.textContent = "FR"; // Якщо сайт на EN, пропонуємо перемкнути на FR
+        } else {
+          langText.textContent = "EN"; // Якщо сайт на FR, пропонуємо перемкнути на EN
+        }
+      }
+
+      // Допоміжні функції для роботи з Cookies
+      function setCookie(key, value) {
+        var expires = new Date();
+        expires.setTime(expires.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 днів
+        document.cookie = key + '=' + value + ';expires=' + expires.toUTCString() + ';path=/';
+      }
+
+      function getCookie(key) {
+        var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+        return keyValue ? keyValue[2] : null;
+      }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 </html>
