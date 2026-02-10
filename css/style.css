@@ -129,6 +129,7 @@ article {
   border-radius: 20px;
   padding: 15px;
   z-index: 1;
+  position: relative;
 }
 
 .separator {
@@ -256,7 +257,9 @@ main {
   margin-bottom: 75px;
   min-width: 259px;
 }
-
+.main-content{
+  position: relative;
+}
 
 /*-----------------------------------*\
   SIDEBAR
@@ -572,7 +575,6 @@ main {
   color: #fff;
 }
 
-/* Адаптація тіні для світлої теми (опціонально, якщо треба змінити колір тіні) */
 body.light-theme .lang-switch-wrapper {
   box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.15);
 }
@@ -761,6 +763,7 @@ body.light-theme .lang-switch-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  padding-bottom: 75px;
 }
 
 .skills-item {
@@ -861,6 +864,7 @@ body.light-theme .lang-switch-wrapper {
   grid-template-columns: 1fr;
   gap: 30px;
   margin-bottom: 10px;
+  padding-bottom: 50px;
 }
 
 .project-item {
@@ -1485,6 +1489,29 @@ border-radius: 0 0 20px 20px;
   .navbar-link {
     --fs-8: 15px;
   }
+
+  .lang-switch-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 20; /* Піднімаємо вище за Navbar (якщо він має менший z-index) */
+    width: 45px;
+    height: 45px;
+    background: var(--nav-bar); 
+    border: 1px solid var(--jet);
+    
+    /* Важливий момент: кути мають співпадати з батьківським блоком */
+    /* Якщо у Navbar радіус 20px, то у кнопки він має бути таким: */
+    border-radius: 0 20px 0 20px; 
+    
+    backdrop-filter: blur(10px);
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
   
   /**
    * PORTFOLIO
@@ -1569,6 +1596,7 @@ border-radius: 0 0 20px 20px;
   .sidebar,
   article {
     width: 950px;
+    position: relative;
   }
 
   /**
@@ -1581,10 +1609,10 @@ border-radius: 0 0 20px 20px;
 
   .main-content {
     position: relative;
-    width: max-content;
+    width: 950px;
     margin: auto;
   }
-
+  
   /**
    * NAVBAR
    */
