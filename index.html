@@ -129,7 +129,7 @@
 
         <article class="a proros de active" data-page="a propos de">
           <div id="google_translate_element" style="display:none;"></div>
-          <div class="lang-switch-wrapper" id="lang-toggle">
+          <div class="lang-switch-wrapper js-lang-toggle">
             <span class="lang-text">EN</span>
           </div>
           <header>
@@ -157,8 +157,7 @@
 
         <!--============================== RESUME START ==============================-->
         <article class="résumé" data-page="résumé">
-          <div id="google_translate_element" style="display:none;"></div>
-          <div class="lang-switch-wrapper" id="lang-toggle">
+          <div class="lang-switch-wrapper js-lang-toggle">
             <span class="lang-text">EN</span>
           </div>
           <header>
@@ -340,8 +339,7 @@
 
         <!--============================== PORTFOLIO START ==============================-->
         <article class="projet" data-page="projet">
-          <div id="google_translate_element" style="display:none;"></div>
-          <div class="lang-switch-wrapper" id="lang-toggle">
+          <div class="lang-switch-wrapper js-lang-toggle">
             <span class="lang-text">EN</span>
           </div>
           <header>
@@ -530,8 +528,7 @@
 
         <!--============================== CONTACT START ==============================-->
         <article class="contact" data-page="contact">
-          <div id="google_translate_element" style="display:none;"></div>
-          <div class="lang-switch-wrapper" id="lang-toggle">
+          <div class="lang-switch-wrapper js-lang-toggle">
             <span class="lang-text">EN</span>
           </div>
           <header>
@@ -584,52 +581,55 @@
       </div>
     </main>
     <script type="text/javascript">
-      // 1. Ініціалізація Google Translate (приховано)
+      // 1. Ініціалізація Google Translate
       function googleTranslateElementInit() {
         new google.translate.TranslateElement({
-          pageLanguage: 'fr', // Ваша основна мова
-          includedLanguages: 'en,fr', // Тільки ці дві мови
+          pageLanguage: 'fr',
+          includedLanguages: 'en,fr',
           autoDisplay: false
         }, 'google_translate_element');
         
-        // Перевірка початкового стану кнопки
+        // Оновлюємо текст на всіх кнопках при завантаженні
         updateButtonLabel();
       }
 
       // 2. Логіка перемикання
-      const langToggle = document.getElementById('lang-toggle');
-      const langText = document.querySelector('.lang-text');
+      // Знаходимо ВСІ кнопки за класом, а не одну за ID
+      const langButtons = document.querySelectorAll('.js-lang-toggle');
 
-      langToggle.addEventListener('click', function() {
-        // Отримуємо поточну мову з cookie
-        const currentLang = getCookie('googtrans');
-        
-        // Якщо зараз англійська -> перемикаємо на французьку (очищаємо cookie)
-        // Якщо зараз французька (або нічого) -> перемикаємо на англійську
-        if (currentLang && currentLang.includes('/en')) {
-          setCookie('googtrans', '/fr/fr'); // Повертаємо FR
-          // Перезавантаження для застосування змін
-          location.reload();
-        } else {
-          setCookie('googtrans', '/fr/en'); // Вмикаємо EN
-          location.reload();
-        }
+      // Проходимося по кожній кнопці і додаємо слухача подій
+      langButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            const currentLang = getCookie('googtrans');
+            
+            if (currentLang && currentLang.includes('/en')) {
+              setCookie('googtrans', '/fr/fr');
+              location.reload();
+            } else {
+              setCookie('googtrans', '/fr/en'); 
+              location.reload();
+            }
+          });
       });
 
-      // Функція для оновлення тексту на кнопці
+      // Функція для оновлення тексту (тепер оновлює ВСІ кнопки)
       function updateButtonLabel() {
         const currentLang = getCookie('googtrans');
-        if (currentLang && currentLang.includes('/en')) {
-          langText.textContent = "FR"; // Якщо сайт на EN, пропонуємо перемкнути на FR
-        } else {
-          langText.textContent = "EN"; // Якщо сайт на FR, пропонуємо перемкнути на EN
-        }
+        const textSpans = document.querySelectorAll('.lang-text'); // Знаходимо всі текстові поля
+
+        textSpans.forEach(span => {
+            if (currentLang && currentLang.includes('/en')) {
+              span.textContent = "FR"; 
+            } else {
+              span.textContent = "EN"; 
+            }
+        });
       }
 
-      // Допоміжні функції для роботи з Cookies
+      // Допоміжні функції
       function setCookie(key, value) {
         var expires = new Date();
-        expires.setTime(expires.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 днів
+        expires.setTime(expires.getTime() + (30 * 24 * 60 * 60 * 1000));
         document.cookie = key + '=' + value + ';expires=' + expires.toUTCString() + ';path=/';
       }
 
