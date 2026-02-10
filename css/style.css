@@ -1007,7 +1007,7 @@ body.light-theme .lang-switch-wrapper {
 }
 
 .contact-form {
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 
 .form-title {
@@ -1985,4 +1985,16 @@ body.light-theme .modal__block a:hover {
 }
 body.ligth-theme .timeline-item:not(:last-child)::before {
     background: var(--jet2);
+}
+
+
+
+/* ==========================================================================
+   KILL GOOGLE TRANSLATE BANNER (NUCLEAR OPTION)
+   ========================================================================== */
+/* ПРИХОВУЄМО БАНЕР */
+.skiptranslate{
+  display: none !important;
+  margin: 0;
+  padding: 0;
 }
