@@ -15,6 +15,39 @@ const sidebarBtn = document.querySelector('[data-sidebar-btn]');
 sidebarBtn.addEventListener('click', function () {
   elementToggleFunc(sidebar);
 });
+
+
+const lightBtn = document.querySelector('.theme-mod');      
+const darkBtn = document.querySelector('.theme-mod-dark');  
+const body = document.body;
+
+const enableLightMode = () => {
+  body.classList.add('light-theme');
+  localStorage.setItem('theme', 'light');
+  
+  lightBtn.style.display = 'none';
+  darkBtn.style.display = 'flex';
+};
+
+const enableDarkMode = () => {
+  body.classList.remove('light-theme');
+  localStorage.setItem('theme', 'dark');
+  
+  darkBtn.style.display = 'none';
+  lightBtn.style.display = 'block'; 
+};
+
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme === 'light') {
+  enableLightMode();
+} else {
+  enableDarkMode();
+}
+
+lightBtn.addEventListener('click', enableLightMode);
+darkBtn.addEventListener('click', enableDarkMode);
+
 //======================================== SIDEBAR TOGGLE ====================================
 
 
