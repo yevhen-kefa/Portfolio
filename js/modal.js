@@ -88,13 +88,13 @@ closeViewer.addEventListener('click', () => {
               <div class="modal__content">
                  <div class="modal__blocks">
                     <div class="modal__block">
-                        <img src="img/kyoto.png" alt="kyoto">
+                        <img src="img/projects/img2brick_1.png" alt="img2brick">
                         <p>
                         img2brick est une application web full-stack permettant de transformer des photos personnelles en mosaïques de briques optimisées. Réalisé en équipe de quatre dans le cadre du BUT informatique, ce projet visait à créer une solution complète allant de l’importation d’image à la gestion de commande. L’enjeu technique principal était l’intégration d’une architecture hybride utilisant PHP, Java et C pour traiter efficacement des données complexes.
                         </p>
                     </div>
                     <div class="modal__block">
-                        <img src="img/projects/kyoto_1.png" alt="kyoto">
+                        <img src="img/projects/img2brick_2.png" alt="img2brick">
                         <p>
                         e système repose sur une structure modulaire où chaque langage remplit un rôle précis. PHP gère l’interface utilisateur et le framework MVC personnalisé, tandis que Java s’occupe du traitement d’image et de la quantification des couleurs. Enfin, un algorithme optimisé en C résout le problème du pavage pour déterminer la disposition idéale des briques. Ce pipeline permet de transformer une image brute en un plan de montage précis tout en minimisant les coûts de fabrication.
                         </p>
@@ -103,7 +103,11 @@ closeViewer.addEventListener('click', () => {
                         <p>
                         Au sein du groupe, j'ai participé au développement de la logique backend et à la coordination entre les différents modules technologiques. J'ai travaillé sur la gestion des flux de données entre PHP et Java, ainsi que sur l'implémentation de fonctionnalités sécurisées comme le système d'authentification et la génération de factures. Ce projet m'a permis de maîtriser l'intégration de systèmes multi-langages et de renforcer mes compétences en optimisation algorithmique et en développement web structuré.
                         </p>
-                        <img src="img/projects/kyoto_2.png" alt="kyoto">
+                        <img src="img/projects/img2brick_3.png" alt="img2brick">
+                    </div>
+                    <div class="modal__block">
+                        <img src="img/projects/img2brick_4.png" alt="img2brick">
+                        <img src="img/projects/img2brick_5.png" alt="img2brick">
                     </div>
                 </div>
               </div>
