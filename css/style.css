@@ -456,7 +456,7 @@ main {
 
 .social-item .social-link {
   color: var(--light-gray-2);
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .social-item .social-link:hover {
@@ -778,6 +778,7 @@ body.light-theme .lang-switch-wrapper {
   width: 45%;
   height: 100px;
   transition: 0.4s;
+  cursor: pointer;
 }
 
 .skills-item:hover{
@@ -787,6 +788,186 @@ body.light-theme .lang-switch-wrapper {
 .skills-item img {
   width: 48px;
   margin-bottom: 3px;
+}
+
+.skills-project-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.skills-project-item {
+  cursor: pointer;
+  color: var(--white-2);
+  padding: 15px;
+  background: var(--nav-bar);
+  border: 1px solid var(--jet);
+  border-radius: 12px;
+  text-align: center;
+  font-size: var(--fs-4);
+  font-weight: var(--fw-500);
+  transition: var(--transition-1);
+}
+
+.skills-project-item:hover {
+  background: var(--jet2);
+  color: var(--light-blue);
+  transform: translateY(-2px);
+}
+
+
+/*Competences*/
+/*==================== MATRICE DES COMPETENCES ====================*/
+.matrix-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 30px;
+}
+
+.matrix-item {
+  background: var(--border-gradient-onyx);
+  border-radius: 14px;
+  position: relative;
+  z-index: 1;
+  padding: 1px;
+}
+
+.matrix-item::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.matrix-header {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+}
+
+.matrix-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--white-2);
+  font-size: var(--fs-4);
+  text-transform: none;
+}
+
+.matrix-title i {
+  color: var(--light-blue);
+  font-size: 20px;
+}
+
+.toggle-icon {
+  color: var(--light-gray);
+  transition: transform var(--transition-1);
+}
+
+.matrix-header.active .toggle-icon {
+  transform: rotate(180deg);
+  color: var(--light-blue);
+}
+
+.matrix-content {
+  display: none;
+  padding: 0 20px 20px 20px;
+  border-top: 1px solid var(--jet);
+  margin-top: 5px;
+  padding-top: 20px;
+}
+
+.matrix-content.active {
+  display: block;
+  animation: fade 0.3s ease;
+}
+
+.level-box {
+  margin-bottom: 15px;
+  padding: 15px;
+  background: var(--nav-bar);
+  border-radius: 10px;
+  border: 1px solid var(--jet);
+}
+
+.level-box:last-child {
+  margin-bottom: 0;
+}
+
+.level-box h5 {
+  color: var(--light-blue);
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.level-desc {
+  color: var(--white-2);
+  font-size: var(--fs-6);
+  line-height: 1.5;
+}
+
+.level-desc strong {
+  color: var(--vegas-gold);
+}
+
+/*==================== MATRIX PROJECTS CARDS ====================*/
+.matrix-project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.matrix-project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: var(--nav-bar);
+  border: 1px solid var(--jet);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform var(--transition-1), border-color var(--transition-1);
+}
+
+.matrix-project-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--light-blue);
+}
+
+.matrix-project-name {
+  color: var(--white-2);
+  font-size: var(--fs-6);
+  font-weight: 500;
+  text-align: center;
+  transition: color var(--transition-1);
+}
+
+.matrix-project-card:hover .matrix-project-name {
+  color: var(--light-blue);
+}
+
+.matrix-project-card .matrix-img {
+  width: 140px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+body.light-theme .level-box {
+  background: var(--black-2);
 }
 /*-----------------------------------*\
   RESUME
@@ -1173,6 +1354,7 @@ border-radius: 0 0 20px 20px;
 .modal__block img{
   width: 40%;
   margin: 20px;
+  cursor: pointer;
 }
 .modal__block p{
   width: 60%;
@@ -1992,7 +2174,6 @@ body.ligth-theme .timeline-item:not(:last-child)::before {
 /* ==========================================================================
    KILL GOOGLE TRANSLATE BANNER (NUCLEAR OPTION)
    ========================================================================== */
-/* ПРИХОВУЄМО БАНЕР */
 .skiptranslate{
   display: none !important;
   margin: 0;

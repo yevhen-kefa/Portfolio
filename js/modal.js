@@ -1,25 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const projects = document.querySelectorAll('.project-item');
+  const projects = document.querySelectorAll('.project-item, .matrix-project-card');
   const popup = document.getElementById('popup-container');
   const popupContent = document.getElementById('popup-content');
 
   const imageViewer = document.getElementById('image-viewer');
-const fullImage = document.getElementById('full-image');
-const closeViewer = document.getElementById('close-viewer');
+  const fullImage = document.getElementById('full-image');
+  const closeViewer = document.getElementById('close-viewer');
 
-// Делегуємо натискання на зображення в модальному вікні
-popupContent.addEventListener('click', (e) => {
+  // Делегуємо натискання на зображення в модальному вікні
+  popupContent.addEventListener('click', (e) => {
+    if(!e.target) return;
+
     if (e.target.tagName === 'IMG') {
         fullImage.src = e.target.src;
         imageViewer.style.display = 'flex';
     }
-});
+
+    if (e.target.classList && e.target.classList.contains('skills-project-item')){
+      const projectId = e.target.getAttribute('data-project');
+      if (descriptions[projectId]) popupContent.innerHTML = descriptions[projectId];
+    }
+  });
 
 
-// Закрити перегляд при кліку на "X"
-closeViewer.addEventListener('click', () => {
-    imageViewer.style.display = 'none';
-});
+  // Закрити перегляд при кліку на "X"
+  closeViewer.addEventListener('click', () => {
+      imageViewer.style.display = 'none';
+  });
 
 
   const descriptions = {
@@ -48,31 +55,31 @@ closeViewer.addEventListener('click', () => {
               <section class="skill">
                   <h3 class="h3 skills-title">Utilisé: </h3>
                   <ul class="skills-list">
-                       <li class="skills-item">
+                       <li class="skills-item" data-skill="html">
                         <img src="img/html.png" alt="Html" />
                         <h5 class="h5">Html5</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="css">
                         <img src="img/css.png" alt="CSS" />
                         <h5 class="h5">CSS3</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="javascript">
                         <img src="img/javascript.png" alt="JavaScript" />
                         <h5 class="h5">JavaScript</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="php">
                         <img src="img/php.png" alt="php" />
                         <h5 class="h5">Php</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="sql">
                         <img src="img/sql.png" alt="sql" />
                         <h5 class="h5">Sql</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="mysql">
                         <img src="img/MySQL.png" alt="sql" />
                         <h5 class="h5">MySQL</h5>
                       </li>
-                       <li class="skills-item">
+                       <li class="skills-item" data-skill="figma">
                         <img src="img/figma.png" alt="Figma" />
                         <h5 class="h5">Figma</h5>
                       </li>
@@ -115,46 +122,121 @@ closeViewer.addEventListener('click', () => {
               <section class="skill">
                   <h3 class="h3 skills-title">Utilisé: </h3>
                   <ul class="skills-list">
-                       <li class="skills-item">
+                       <li class="skills-item" data-skill="html">
                         <img src="img/html.png" alt="Html" />
                         <h5 class="h5">Html5</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="css">
                         <img src="img/css.png" alt="CSS" />
                         <h5 class="h5">CSS3</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill=""javascript>
                         <img src="img/javascript.png" alt="JavaScript" />
                         <h5 class="h5">JavaScript</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="php">
                         <img src="img/php.png" alt="php" />
                         <h5 class="h5">Php</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="sql">
                         <img src="img/sql.png" alt="sql" />
                         <h5 class="h5">Sql</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="mysql">
                         <img src="img/MySQL.png" alt="sql" />
                         <h5 class="h5">MySQL</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="figma">
                         <img src="img/figma.png" alt="Figma" />
                         <h5 class="h5">Figma</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="java">
                         <img src="img/java.png" alt="Java" />
                         <h5 class="h5">Java</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="c">
                         <img src="img/c.svg" alt="C" />
                         <h5 class="h5">C</h5>
+                      </li>
+                      <li class="skills-item" data-skill="docker">
+                        <img src="img/Docker.png" alt="Docker" />
+                        <h5 class="h5">Docker</h5>
                       </li>
                     </ul>
               </section>
           </div>
       `,
+      tncf: `
+          <div class="popup-content">
+            <header class="modal__header" onclick="togglePopup('tncf')">
+              <h2 class="h2 form-title">TNCF</h2>
+            </header>
+            <div class="modal__content">
+              <div class="modal__blocks">
+                <div class="modal__block">
+                    <img src="img/projects/tncf_1.png" alt="tncf">
+                    <p>
+                     TNCF est une application web full-stack de réservation de billets de train. Réalisé en équipe de quatre dans le cadre d'un projet universitaire, ce site visait à créer une plateforme complète allant de la recherche de trajets à la gestion sécurisée du profil utilisateur et des achats. L’enjeu technique principal était de concevoir une architecture moderne séparant strictement le front-end et le back-end.
+                    </p>
+                </div>
+                <div class="modal__block">
+                    <img src="img/projects/tncf_2.png" alt="tncf">
+                    <p>
+                    Le système repose sur une stack technologique robuste et modulaire.L'interface utilisateur, interactive et fluide, est développée en React(TypeScript), tandis que la logique métier et les requêtes vers la basede données MongoDB sont gérées par une API REST sur mesure en PHP.L'ensemble de l'environnement est conteneurisé avec Docker, assurant undéploiement homogène et indépendant de chaque service.
+                    </p>
+                </div>
+                <div class="modal__block">
+                    <p>
+                    En tant que Lead Developer, j'ai supervisé l'architecture technique etle développement des fonctionnalités clés. Mon plus grand défi a été deconfigurer l'environnement Docker et de gérer la communication complexeentre React et PHP, notamment la gestion des sessions, le paramétragedes requêtes CORS et la sécurisation des flux de données. Ce projet m'apermis de consolider mes compétences en intégration full-stack etd'acquérir une solide expérience en infrastructure logicielle.
+                    </p>
+                    <img src="img/projects/tncf_3.png" alt="tncf">
+                </div>
+                <div class="modal__block">
+                    <img src="img/projects/tncf_4.png" alt="tncf">
+                    <img src="img/projects/tncf_5.png" alt="tncf">
+                </div>
+              </div>
+            </div>
+            <h3 class="h3 skills-title"><a class="liens" href="https://github.com/yevhen-kefa/TNCF" target="_blank">Voir sur GitHub</a></h3>
+              <section class="skill">
+                  <h3 class="h3 skills-title">Utilisé: </h3>
+                  <ul class="skills-list">
+                      <li class="skills-item" data-skill="react">
+                        <img src="img/react.svg" alt="React" />
+                        <h5 class="h5">React</h5>
+                      </li>
+                      <li class="skills-item" data-skill="typescript">
+                        <img src="img/typescript.svg" alt="TypeScript" />
+                        <h5 class="h5">TypeScript</h5>
+                      </li>
+                      <li class="skills-item" data-skill="php">
+                        <img src="img/php.png" alt="PHP" />
+                        <h5 class="h5">PHP</h5>
+                      </li>
+                      <li class="skills-item" data-skill="mongodb">
+                        <img src="img/mongodb.svg" alt="MongoDB" />
+                        <h5 class="h5">MongoDB</h5>
+                      </li>
+                      <li class="skills-item" data-skill="docker">
+                        <img src="img/Docker.png" alt="Docker" />
+                        <h5 class="h5">Docker</h5>
+                      </li>
+                      <li class="skills-item" data-skill="html">
+                        <img src="img/html.png" alt="HTML" />
+                        <h5 class="h5">HTML5</h5>
+                      </li>
+                      <li class="skills-item" data-skill="css">
+                        <img src="img/css.png" alt="CSS" />
+                        <h5 class="h5">CSS3</h5>
+                      </li>
+                      <li class="skills-item" data-skill="figma">
+                        <img src="img/figma.png" alt="Figma" />
+                        <h5 class="h5">Figma</h5>
+                      </li>
+                    </ul>
+              </section>
+          </div>
+          `,
       tetris: `
           <div class="popup-content">
               <header class="modal__header" onclick="togglePopup('tetris')">
@@ -226,7 +308,7 @@ closeViewer.addEventListener('click', () => {
               <section class="skill">
                   <h3 class="h3 skills-title">Utilisé: </h3>
                   <ul class="skills-list">
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="python">
                           <img src="img/python.png" alt="Python" />
                           <h5 class="h5">Python</h5>
                       </li>
@@ -234,10 +316,10 @@ closeViewer.addEventListener('click', () => {
               </section>
           </div>
       `,
-      primeur_passions: `
+     primeur_passions: `
           <div class="popup-content">
               <header class="modal__header" onclick="togglePopup('primeur_passions')">
-                  <h2  class="h2 form-title">Qix</h2>
+                  <h2  class="h2 form-title">Primeur Passions</h2>
               </header>
               <div class="modal__content">
                   <div class="modal__blocks">
@@ -264,35 +346,35 @@ closeViewer.addEventListener('click', () => {
               <section class="skill">
                   <h3 class="h3 skills-title">Utilisé: </h3>
                   <ul class="skills-list">
-                       <li class="skills-item">
+                       <li class="skills-item" data-skill="html">
                         <img src="img/html.png" alt="Html" />
                         <h5 class="h5">Html5</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="css">
                         <img src="img/css.png" alt="CSS" />
                         <h5 class="h5">CSS3</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="javascript">
                         <img src="img/javascript.png" alt="JavaScript" />
                         <h5 class="h5">JavaScript</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="php">
                         <img src="img/php.png" alt="php" />
                         <h5 class="h5">Php</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="sql">
                         <img src="img/sql.png" alt="sql" />
                         <h5 class="h5">Sql</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="mysql">
                         <img src="img/MySQL.png" alt="sql" />
                         <h5 class="h5">MySQL</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="postgresql">
                         <img src="img/PostgreSQL.png" alt="sql" />
                         <h5 class="h5">PostgreSQL</h5>
                       </li>
-                       <li class="skills-item">
+                       <li class="skills-item" data-skill="figma">
                         <img src="img/figma.png" alt="Figma" />
                         <h5 class="h5">Figma</h5>
                       </li>
@@ -303,7 +385,7 @@ closeViewer.addEventListener('click', () => {
       cimetiere: `
         <div class="popup-content">
           <header class="modal__header" onclick="togglePopup('cimetiere')">
-              <h2  class="h2 form-title">Cimetiere</h2>
+              <h2  class="h2 form-title">Cimetière</h2>
           </header>
           <div class="modal__content">
               <div class="modal__blocks">
@@ -326,19 +408,19 @@ closeViewer.addEventListener('click', () => {
           <section class="skill">
                   <h3 class="h3 skills-title">Utilisé: </h3>
                   <ul class="skills-list">
-                       <li class="skills-item">
+                       <li class="skills-item" data-skill="php">
                           <img src="img/php.png" alt="php" />
                           <h5 class="h5">Php</h5>
                         </li>
-                        <li class="skills-item">
+                        <li class="skills-item" data-skill="sql">
                           <img src="img/sql.png" alt="sql" />
                           <h5 class="h5">Sql</h5>
                         </li>
-                        <li class="skills-item">
+                        <li class="skills-item" data-skill="mysql">
                           <img src="img/MySQL.png" alt="sql" />
                           <h5 class="h5">MySQL</h5>
                         </li>
-                        <li class="skills-item">
+                        <li class="skills-item" data-skill="postgresql">
                           <img src="img/PostgreSQL.png" alt="sql" />
                           <h5 class="h5">PostgrSQL</h5>
                         </li>
@@ -377,7 +459,7 @@ closeViewer.addEventListener('click', () => {
               <section class="skill">
                   <h3 class="h3 skills-title">Utilisé: </h3>
                   <ul class="skills-list">
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="java">
                           <img src="img/java.png" alt="Java" />
                           <h5 class="h5">Java</h5>
                       </li>
@@ -388,7 +470,7 @@ closeViewer.addEventListener('click', () => {
       codex: `
         <div class="popup-content">
           <header class="modal__header" onclick="togglePopup('codex')">
-              <h2  class="h2 form-title">Codex Naturalist</h2>
+              <h2  class="h2 form-title">Codex Naturalis</h2>
           </header>
           <div class="modal__content">
               <div class="modal__blocks">
@@ -415,7 +497,7 @@ closeViewer.addEventListener('click', () => {
           <section class="skill">
           <h3 class="h3 skills-title">Utilisé: </h3>
           <ul class="skills-list">
-              <li class="skills-item">
+              <li class="skills-item" data-skill="java">
                 <img src="img/java.png" alt="Java" />
                 <h5 class="h5">Java</h5>
               </li>
@@ -452,35 +534,35 @@ closeViewer.addEventListener('click', () => {
               <section class="skill">
                   <h3 class="h3 skills-title">Utilisé: </h3>
                   <ul class="skills-list">
-                       <li class="skills-item">
+                       <li class="skills-item" data-skill="html">
                         <img src="img/html.png" alt="Html" />
                         <h5 class="h5">Html5</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="css">
                         <img src="img/css.png" alt="CSS" />
                         <h5 class="h5">CSS3</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="javascript">
                         <img src="img/javascript.png" alt="JavaScript" />
                         <h5 class="h5">JavaScript</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="php">
                         <img src="img/php.png" alt="php" />
                         <h5 class="h5">Php</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="sql">
                         <img src="img/sql.png" alt="sql" />
                         <h5 class="h5">Sql</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="mysql">
                         <img src="img/MySQL.png" alt="sql" />
                         <h5 class="h5">MySQL</h5>
                       </li>
-                      <li class="skills-item">
+                      <li class="skills-item" data-skill="postgresql">
                         <img src="img/PostgreSQL.png" alt="sql" />
                         <h5 class="h5">PostgreSQL</h5>
                       </li>
-                       <li class="skills-item">
+                       <li class="skills-item" data-skill="figma">
                         <img src="img/figma.png" alt="Figma" />
                         <h5 class="h5">Figma</h5>
                       </li>
@@ -488,7 +570,6 @@ closeViewer.addEventListener('click', () => {
               </section>
           </div>
       `
-
   };
 
   projects.forEach(project => {
@@ -508,6 +589,96 @@ closeViewer.addEventListener('click', () => {
     elem.classList.toggle('active');
   };
 
+  
+  
+  const skillToProjects={};
 
+  for(const [projectId, htmlString] of Object.entries(descriptions)){
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = htmlString;
+
+    const titleElem = tempDiv.querySelector('.form-title');
+    const projectName = titleElem ? titleElem.textContent.trim() : projectId;
+
+    const projectSkills = tempDiv.querySelectorAll('.skills-item[data-skill]');
+
+    projectSkills.forEach(skillEl => {
+      const skillId = skillEl.getAttribute('data-skill');
+
+      if(!skillToProjects[skillId]){
+        skillToProjects[skillId] = [];
+      }
+
+      const exists = skillToProjects[skillId].some(p => p.id === projectId);
+      if (!exists){
+        skillToProjects[skillId].push({id: projectId, name: projectName});
+      } 
+    })
+  }
+
+  const skillsItems = document.querySelectorAll('.skills-item');
+
+  skillsItems.forEach(skill => {
+      skill.addEventListener('click', (e) => {
+          e.preventDefault(); 
+          
+          const skillId = skill.getAttribute('data-skill');
+          if (!skillId) return; 
+
+          // Безпечне отримання тексту, ігноруючи можливі теги від розширень
+          const h5Element = skill.querySelector('h5');
+          const skillName = h5Element ? h5Element.textContent.trim() : 'cette technologie';
+          
+          const projectsList = skillToProjects[skillId] || [];
+
+          // Додаємо клас notranslate для захисту від конфліктів з розширеннями-перекладачами
+          let htmlContent = `
+              <div class="popup-content notranslate">
+                  <header class="modal__header">
+                      <h2 class="h2 form-title">Projets utilisant ${skillName}</h2>
+                  </header>
+                  <div class="modal__content" style="padding: 30px;">
+                      <ul class="skills-project-list">
+          `;
+
+          if (projectsList.length > 0) {
+              projectsList.forEach(proj => {
+                  htmlContent += `<li class="skills-project-item" data-project="${proj.id}">${proj.name}</li>`;
+              });
+          } else {
+              htmlContent += `<p style="color: var(--white-2); text-align: center;">Aucun projet documenté pour le moment.</p>`;
+          }
+
+          htmlContent += `
+                      </ul>
+                  </div>
+              </div>
+          `;
+
+          popupContent.innerHTML = htmlContent;
+          popup.style.display = 'flex';
+      });
+  });
+
+
+  //======================================== MATRICE ACCORDION ====================================
+  const matrixBtns = document.querySelectorAll('[data-matrix-btn]');
+
+  for (let i = 0; i < matrixBtns.length; i++) {
+    matrixBtns[i].addEventListener('click', function () {
+      
+      // Закриваємо всі інші відкриті вкладки (якщо хочеш, щоб відкрита була лише одна)
+      for (let j = 0; j < matrixBtns.length; j++) {
+        if (matrixBtns[j] !== this) {
+          matrixBtns[j].classList.remove('active');
+          matrixBtns[j].nextElementSibling.classList.remove('active');
+        }
+      }
+
+      // Відкриваємо/закриваємо поточну вкладку
+      this.classList.toggle('active');
+      this.nextElementSibling.classList.toggle('active');
+    });
+  }
   
 });
